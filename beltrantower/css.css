@@ -1,0 +1,174 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.hero {
+    height: 100vh; /* Ocupa toda la pantalla */
+    background: linear-gradient(rgba(0, 0, 40, 0.6), rgba(0, 0, 40, 0.6)), 
+                url('sung-jin-cho-jyUOLxFxhZo-unsplash.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 8%;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Texto Principal */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 5.5rem; /* Tamaño grande */
+    letter-spacing: 5px;
+    line-height: 0.9;
+    font-weight: 400;
+}
+
+.hero-content h1 span {
+    font-weight: 900; /* Construcción más negrita */
+}
+
+/* Barra de contacto inferior */
+.contact-bar {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.15); /* Efecto cristal/translúcido */
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 50px;
+    padding: 15px 60px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.seccion-empresa {
+    padding: 80px 5%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Proporción de imágenes vs texto */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Layout de las imágenes partidas */
+.imagenes-layout {
+    display: grid;
+    grid-template-columns: 4fr 1fr; /* La primera imagen es más ancha que la segunda */
+    gap: 15px;
+    height: 500px; /* Ajusta la altura según necesites */
+}
+
+.imagenes-layout img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto evita que las fotos se deformen */
+}
+
+/* Estilo del Texto */
+.contenido-texto h1 {
+    font-size: 3.5rem;
+    color: #000080; /* Azul oscuro */
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contenido-texto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* --- RESPONSIVE PARA CELULARES --- */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustes de la Parte Principal (Hero) */
+    .navbar {
+        flex-direction: column; /* Logo arriba, menú abajo */
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Reducimos el tamaño del título */
+        letter-spacing: 2px;
+    }
+
+    .contact-bar {
+        flex-direction: column; /* Los datos de contacto uno sobre otro */
+        gap: 10px;
+        padding: 15px 30px;
+        width: 90%; /* Que ocupe casi todo el ancho */
+    }
+
+    /* 2. Ajustes de la Segunda Sección (Welcome) */
+    .contenedor-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .imagenes-layout {
+        height: 350px; /* Reducimos la altura del bloque de imágenes */
+        grid-template-columns: 1fr 1fr; /* En celular se ven mejor de igual tamaño */
+    }
+
+    .contenido-texto {
+        text-align: center; /* Centramos el texto para mejor lectura */
+    }
+
+    .contenido-texto h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .contenido-texto p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .imagenes-layout {
+        height: 250px;
+    }
+}
