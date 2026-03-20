@@ -4,7 +4,7 @@
 .hero {
     height: 100vh; /* Ocupa toda la pantalla */
     background: linear-gradient(rgba(0, 0, 40, 0.6), rgba(0, 0, 40, 0.6)), 
-                url('sung-jin-cho-jyUOLxFxhZo-unsplash.jpg'); /* Reemplaza con tu imagen */
+                url('tower.jpg'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
     display: flex;
